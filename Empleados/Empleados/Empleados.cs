@@ -12,6 +12,7 @@ namespace Empleados
         private string nombre;
         private string dui;
         private double salario;
+        private double afp;
 
         public int Id {
             get { return id; }
@@ -26,6 +27,12 @@ namespace Empleados
         {
             get { return dui; }
             set { dui = value; }
+        }
+
+        public double Afp
+        {
+            get { return afp; }
+            set { afp = value; }
         }
         public double Salario
         {

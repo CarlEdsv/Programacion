@@ -34,7 +34,6 @@ namespace Empleados
             this.labelDUI = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDUI = new System.Windows.Forms.TextBox();
-            this.btGuardar = new System.Windows.Forms.Button();
             this.labelRegistro = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtAFP = new System.Windows.Forms.TextBox();
@@ -84,20 +83,10 @@ namespace Empleados
             this.txtDUI.Size = new System.Drawing.Size(100, 20);
             this.txtDUI.TabIndex = 5;
             // 
-            // btGuardar
-            // 
-            this.btGuardar.Location = new System.Drawing.Point(82, 257);
-            this.btGuardar.Name = "btGuardar";
-            this.btGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btGuardar.TabIndex = 6;
-            this.btGuardar.Text = "Guardar";
-            this.btGuardar.UseVisualStyleBackColor = true;
-            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
-            // 
             // labelRegistro
             // 
             this.labelRegistro.AutoSize = true;
-            this.labelRegistro.Location = new System.Drawing.Point(271, 262);
+            this.labelRegistro.Location = new System.Drawing.Point(271, 255);
             this.labelRegistro.Name = "labelRegistro";
             this.labelRegistro.Size = new System.Drawing.Size(0, 13);
             this.labelRegistro.TabIndex = 7;
@@ -140,7 +129,7 @@ namespace Empleados
             // 
             // btInsertar
             // 
-            this.btInsertar.Location = new System.Drawing.Point(391, 249);
+            this.btInsertar.Location = new System.Drawing.Point(124, 242);
             this.btInsertar.Name = "btInsertar";
             this.btInsertar.Size = new System.Drawing.Size(75, 38);
             this.btInsertar.TabIndex = 13;
@@ -203,7 +192,7 @@ namespace Empleados
             // 
             // btClean
             // 
-            this.btClean.Location = new System.Drawing.Point(82, 297);
+            this.btClean.Location = new System.Drawing.Point(124, 297);
             this.btClean.Name = "btClean";
             this.btClean.Size = new System.Drawing.Size(75, 23);
             this.btClean.TabIndex = 20;
@@ -229,7 +218,6 @@ namespace Empleados
             this.Controls.Add(this.labelSalario);
             this.Controls.Add(this.txtAFP);
             this.Controls.Add(this.labelRegistro);
-            this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.txtDUI);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.labelDUI);
@@ -248,7 +236,6 @@ namespace Empleados
         private System.Windows.Forms.Label labelDUI;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDUI;
-        private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.Label labelRegistro;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label labelSalario;

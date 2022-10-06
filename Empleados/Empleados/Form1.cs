@@ -32,7 +32,12 @@ namespace Empleados
 
         private void btGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "") 
+
+        }
+
+        private void btInsertar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
             {
                 errorProvider1.SetError(txtNombre, "No ingresó el nombre");
                 txtNombre.Focus();
@@ -65,12 +70,10 @@ namespace Empleados
             Empleado.Nombre = txtNombre.Text;
             Empleado.Dui = txtDUI.Text;
             Empleado.Salario = Convert.ToDouble(txtSalario.Text);
-            txtAFP.Text = Empleado.AFP(Empleado.Salario).ToString();
-            labelRegistro.Text = "¡Registro guardado!";
-        }
+            Empleado.Afp = Empleado.AFP(Empleado.Salario);
+            txtAFP.Text = Empleado.Afp.ToString();
+            labelRegistro.Text = "¡Registro guardado de la clase!";
 
-        private void btInsertar_Click(object sender, EventArgs e)
-        {
             SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
             AttachDbFilename=|DataDirectory|\Planilla.mdf;Integrated Security=True;Connect Timeout=30");
             conexion.Open();
