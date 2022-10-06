@@ -41,20 +41,22 @@ namespace Empleados
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.labelAFP = new System.Windows.Forms.Label();
             this.btInsertar = new System.Windows.Forms.Button();
-            this.labConsNombre = new System.Windows.Forms.Label();
-            this.labConsDUI = new System.Windows.Forms.Label();
-            this.labConsSalario = new System.Windows.Forms.Label();
-            this.labConsAFP = new System.Windows.Forms.Label();
             this.btConsultar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btClean = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dui = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AFP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(118, 84);
+            this.labelNombre.Location = new System.Drawing.Point(21, 22);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(44, 13);
             this.labelNombre.TabIndex = 1;
@@ -63,7 +65,7 @@ namespace Empleados
             // labelDUI
             // 
             this.labelDUI.AutoSize = true;
-            this.labelDUI.Location = new System.Drawing.Point(118, 119);
+            this.labelDUI.Location = new System.Drawing.Point(21, 57);
             this.labelDUI.Name = "labelDUI";
             this.labelDUI.Size = new System.Drawing.Size(26, 13);
             this.labelDUI.TabIndex = 2;
@@ -71,14 +73,14 @@ namespace Empleados
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(274, 84);
+            this.txtNombre.Location = new System.Drawing.Point(177, 22);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtDUI
             // 
-            this.txtDUI.Location = new System.Drawing.Point(274, 119);
+            this.txtDUI.Location = new System.Drawing.Point(177, 57);
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.Size = new System.Drawing.Size(100, 20);
             this.txtDUI.TabIndex = 5;
@@ -86,7 +88,7 @@ namespace Empleados
             // labelRegistro
             // 
             this.labelRegistro.AutoSize = true;
-            this.labelRegistro.Location = new System.Drawing.Point(271, 255);
+            this.labelRegistro.Location = new System.Drawing.Point(174, 193);
             this.labelRegistro.Name = "labelRegistro";
             this.labelRegistro.Size = new System.Drawing.Size(0, 13);
             this.labelRegistro.TabIndex = 7;
@@ -97,7 +99,7 @@ namespace Empleados
             // 
             // txtAFP
             // 
-            this.txtAFP.Location = new System.Drawing.Point(274, 199);
+            this.txtAFP.Location = new System.Drawing.Point(177, 137);
             this.txtAFP.Name = "txtAFP";
             this.txtAFP.Size = new System.Drawing.Size(100, 20);
             this.txtAFP.TabIndex = 9;
@@ -105,7 +107,7 @@ namespace Empleados
             // labelSalario
             // 
             this.labelSalario.AutoSize = true;
-            this.labelSalario.Location = new System.Drawing.Point(118, 159);
+            this.labelSalario.Location = new System.Drawing.Point(21, 97);
             this.labelSalario.Name = "labelSalario";
             this.labelSalario.Size = new System.Drawing.Size(39, 13);
             this.labelSalario.TabIndex = 10;
@@ -113,7 +115,7 @@ namespace Empleados
             // 
             // txtSalario
             // 
-            this.txtSalario.Location = new System.Drawing.Point(274, 159);
+            this.txtSalario.Location = new System.Drawing.Point(177, 97);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(100, 20);
             this.txtSalario.TabIndex = 11;
@@ -121,7 +123,7 @@ namespace Empleados
             // labelAFP
             // 
             this.labelAFP.AutoSize = true;
-            this.labelAFP.Location = new System.Drawing.Point(121, 205);
+            this.labelAFP.Location = new System.Drawing.Point(24, 143);
             this.labelAFP.Name = "labelAFP";
             this.labelAFP.Size = new System.Drawing.Size(27, 13);
             this.labelAFP.TabIndex = 12;
@@ -129,7 +131,7 @@ namespace Empleados
             // 
             // btInsertar
             // 
-            this.btInsertar.Location = new System.Drawing.Point(124, 242);
+            this.btInsertar.Location = new System.Drawing.Point(27, 180);
             this.btInsertar.Name = "btInsertar";
             this.btInsertar.Size = new System.Drawing.Size(75, 38);
             this.btInsertar.TabIndex = 13;
@@ -137,45 +139,9 @@ namespace Empleados
             this.btInsertar.UseVisualStyleBackColor = true;
             this.btInsertar.Click += new System.EventHandler(this.btInsertar_Click);
             // 
-            // labConsNombre
-            // 
-            this.labConsNombre.AutoSize = true;
-            this.labConsNombre.Location = new System.Drawing.Point(509, 44);
-            this.labConsNombre.Name = "labConsNombre";
-            this.labConsNombre.Size = new System.Drawing.Size(35, 13);
-            this.labConsNombre.TabIndex = 14;
-            this.labConsNombre.Text = "label1";
-            // 
-            // labConsDUI
-            // 
-            this.labConsDUI.AutoSize = true;
-            this.labConsDUI.Location = new System.Drawing.Point(509, 86);
-            this.labConsDUI.Name = "labConsDUI";
-            this.labConsDUI.Size = new System.Drawing.Size(35, 13);
-            this.labConsDUI.TabIndex = 15;
-            this.labConsDUI.Text = "label2";
-            // 
-            // labConsSalario
-            // 
-            this.labConsSalario.AutoSize = true;
-            this.labConsSalario.Location = new System.Drawing.Point(509, 126);
-            this.labConsSalario.Name = "labConsSalario";
-            this.labConsSalario.Size = new System.Drawing.Size(35, 13);
-            this.labConsSalario.TabIndex = 16;
-            this.labConsSalario.Text = "label3";
-            // 
-            // labConsAFP
-            // 
-            this.labConsAFP.AutoSize = true;
-            this.labConsAFP.Location = new System.Drawing.Point(509, 166);
-            this.labConsAFP.Name = "labConsAFP";
-            this.labConsAFP.Size = new System.Drawing.Size(35, 13);
-            this.labConsAFP.TabIndex = 17;
-            this.labConsAFP.Text = "label4";
-            // 
             // btConsultar
             // 
-            this.btConsultar.Location = new System.Drawing.Point(512, 249);
+            this.btConsultar.Location = new System.Drawing.Point(177, 180);
             this.btConsultar.Name = "btConsultar";
             this.btConsultar.Size = new System.Drawing.Size(75, 38);
             this.btConsultar.TabIndex = 18;
@@ -185,14 +151,14 @@ namespace Empleados
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(503, 205);
+            this.textBox1.Location = new System.Drawing.Point(177, 238);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 19;
             // 
             // btClean
             // 
-            this.btClean.Location = new System.Drawing.Point(124, 297);
+            this.btClean.Location = new System.Drawing.Point(27, 235);
             this.btClean.Name = "btClean";
             this.btClean.Size = new System.Drawing.Size(75, 23);
             this.btClean.TabIndex = 20;
@@ -200,18 +166,49 @@ namespace Empleados
             this.btClean.UseVisualStyleBackColor = true;
             this.btClean.Click += new System.EventHandler(this.btClean_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Nombre,
+            this.Dui,
+            this.AFP});
+            this.dataGridView1.Location = new System.Drawing.Point(293, 22);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(445, 233);
+            this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Dui
+            // 
+            this.Dui.HeaderText = "Dui";
+            this.Dui.Name = "Dui";
+            // 
+            // AFP
+            // 
+            this.AFP.HeaderText = "AFP";
+            this.AFP.Name = "AFP";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 332);
+            this.ClientSize = new System.Drawing.Size(763, 281);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btClean);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btConsultar);
-            this.Controls.Add(this.labConsAFP);
-            this.Controls.Add(this.labConsSalario);
-            this.Controls.Add(this.labConsDUI);
-            this.Controls.Add(this.labConsNombre);
             this.Controls.Add(this.btInsertar);
             this.Controls.Add(this.labelAFP);
             this.Controls.Add(this.txtSalario);
@@ -226,6 +223,7 @@ namespace Empleados
             this.Text = "Registro de empleados";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,12 +242,13 @@ namespace Empleados
         private System.Windows.Forms.Label labelAFP;
         private System.Windows.Forms.Button btInsertar;
         private System.Windows.Forms.Button btConsultar;
-        private System.Windows.Forms.Label labConsAFP;
-        private System.Windows.Forms.Label labConsSalario;
-        private System.Windows.Forms.Label labConsDUI;
-        private System.Windows.Forms.Label labConsNombre;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btClean;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dui;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AFP;
     }
 }
 

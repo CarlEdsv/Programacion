@@ -103,10 +103,11 @@ namespace Empleados
             SqlDataReader registro = comando.ExecuteReader();
             if (registro.Read())
             {
-                labConsNombre.Text = registro["Nombre"].ToString();
-                labConsDUI.Text = registro["DUI"].ToString();
-                labConsSalario.Text = registro["Salario"].ToString();
-                labConsAFP.Text = registro["AFP"].ToString();
+                dataGridView1.Rows[0].Cells[0].Value = registro.GetInt32(0);
+                dataGridView1.Rows[0].Cells[1].Value = registro.GetString(1);
+                dataGridView1.Rows[0].Cells[2].Value = registro.GetString(2);
+                dataGridView1.Rows[0].Cells[3].Value = registro.GetDecimal(3);
+                dataGridView1.Rows[0].Cells[4].Value = registro.GetDecimal(4);
             }
             else
                 MessageBox.Show("No existe un Empleado con el código ingresado");
@@ -121,6 +122,11 @@ namespace Empleados
             txtSalario.Text = "";
             txtAFP.Text = "";
             labelRegistro.Text = "";
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 
