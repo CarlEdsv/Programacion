@@ -32,7 +32,12 @@ namespace Empleados
 
         private void btGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "") 
+
+        }
+
+        private void btInsertar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
             {
                 errorProvider1.SetError(txtNombre, "No ingresó el nombre");
                 txtNombre.Focus();
@@ -65,12 +70,10 @@ namespace Empleados
             Empleado.Nombre = txtNombre.Text;
             Empleado.Dui = txtDUI.Text;
             Empleado.Salario = Convert.ToDouble(txtSalario.Text);
-            txtAFP.Text = Empleado.AFP(Empleado.Salario).ToString();
-            labelRegistro.Text = "¡Registro guardado!";
-        }
+            Empleado.Afp = Empleado.AFP(Empleado.Salario);
+            txtAFP.Text = Empleado.Afp.ToString();
+            labelRegistro.Text = "¡Registro guardado de la clase!";
 
-        private void btInsertar_Click(object sender, EventArgs e)
-        {
             SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
             AttachDbFilename=|DataDirectory|\Planilla.mdf;Integrated Security=True;Connect Timeout=30");
             conexion.Open();
@@ -100,10 +103,11 @@ namespace Empleados
             SqlDataReader registro = comando.ExecuteReader();
             if (registro.Read())
             {
-                labConsNombre.Text = registro["Nombre"].ToString();
-                labConsDUI.Text = registro["DUI"].ToString();
-                labConsSalario.Text = registro["Salario"].ToString();
-                labConsAFP.Text = registro["AFP"].ToString();
+                dataGridView1.Rows[0].Cells[0].Value = registro.GetInt32(0);
+                dataGridView1.Rows[0].Cells[1].Value = registro.GetString(1);
+                dataGridView1.Rows[0].Cells[2].Value = registro.GetString(2);
+                dataGridView1.Rows[0].Cells[3].Value = registro.GetDecimal(3);
+                dataGridView1.Rows[0].Cells[4].Value = registro.GetDecimal(4);
             }
             else
                 MessageBox.Show("No existe un Empleado con el código ingresado");
@@ -118,6 +122,11 @@ namespace Empleados
             txtSalario.Text = "";
             txtAFP.Text = "";
             labelRegistro.Text = "";
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 
