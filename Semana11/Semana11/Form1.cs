@@ -83,7 +83,7 @@ namespace Semana11
             }
 
             errorProvider1.SetError(txtConsultar, "");
-            string cadena = "select Nombre,Dui, Salario, Afp from Empleados where Id="+cod;
+            string cadena = "select id, dui, nombre, salario, afp from Empleados where Id="+cod;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             SqlDataReader registro = comando.ExecuteReader();
             if (registro.Read())
