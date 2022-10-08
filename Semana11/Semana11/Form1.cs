@@ -74,7 +74,15 @@ namespace Semana11
         {
             SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;Connect Timeout=30");
             conexion.Open();
-            string cod =txtConsultar.Text;
+            Int32 cod;
+            if (!Int32.TryParse(txtConsultar.Text, out cod))
+            {
+                errorProvider1.SetError(txtConsultar, "No ingresó el salario de forma correcta");
+                txtSalario.Focus();
+                return;
+            }
+
+            errorProvider1.SetError(txtConsultar, "");
             string cadena = "select Nombre,Dui, Salario, Afp from Empleados where Id="+cod;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             SqlDataReader registro = comando.ExecuteReader();
@@ -89,34 +97,37 @@ namespace Semana11
             else
                 MessageBox.Show("No existe un empleado con el código ingresado");
             conexion.Close();
-        }
+        }//ERROR AL CONSULTAR. SEPA SI ELIMINAR Y MODIFICAR FUNCIONAN.
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
             SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;Connect Timeout=30");
             conexion.Open();
-            string cod = txtConsultar.Text;
-
-            string cadena = "delete from Empleados Where Id=" + cod;
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            int cant = comando.ExecuteNonQuery();
-            if (cant == 1)
+            try
             {
-                this.dataGridView1.DataSource = null;
-                this.dataGridView1.Rows.Clear();
-                MessageBox.Show("Se borró el registro");
+                string cod = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                string cadena = "delete from [Empleados] where Id=" + cod;
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                int cant;
+                cant = comando.ExecuteNonQuery();
+                if (cant == 1)
+                {
+                    this.dataGridView1.DataSource = null;
+                    this.dataGridView1.Rows.Clear();
+                    MessageBox.Show("Se borró el registro");
+                }
             }
-            else
-                MessageBox.Show("No se encontró el registro");
+            catch (Exception) { MessageBox.Show("Debe seleccionar un registro"); }
             conexion.Close();
-
         }
 
         private void btModificar_Click(object sender, EventArgs e)
         {
             SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;Connect Timeout=30");
             conexion.Open();
-            string cod = txtConsultar.Text;
+        try
+        {
+            string cod = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             string Dnombre = dataGridView1.Rows[0].Cells[1].Value.ToString();
             string Ddui = dataGridView1.Rows[0].Cells[2].Value.ToString();
             string Dsalario = dataGridView1.Rows[0].Cells[3].Value.ToString();
@@ -132,9 +143,13 @@ namespace Semana11
                 this.dataGridView1.Rows.Clear();
                 MessageBox.Show("Se modificaron los datos del empleado");
             }
-            else
-                MessageBox.Show("No existe seleccionó el empleado");
+        }
+        catch (Exception)
+        {
+            MessageBox.Show("No existe seleccionó el empleado");
             conexion.Close();
+        }
+
         }
 
         private void btSeeAll_Click(object sender, EventArgs e)

@@ -211,7 +211,6 @@ namespace Semana11
             this.btModificar.TabIndex = 36;
             this.btModificar.Text = "Modificar";
             this.btModificar.UseVisualStyleBackColor = true;
-            this.btModificar.Click += new System.EventHandler(this.btModificar_Click);
             // 
             // btSeeAll
             // 
@@ -221,7 +220,6 @@ namespace Semana11
             this.btSeeAll.TabIndex = 37;
             this.btSeeAll.Text = "Ver todo";
             this.btSeeAll.UseVisualStyleBackColor = true;
-            this.btSeeAll.Click += new System.EventHandler(this.btSeeAll_Click);
             // 
             // Form1
             // 
