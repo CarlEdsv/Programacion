@@ -34,7 +34,6 @@ namespace Empleados
             this.labelDUI = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDUI = new System.Windows.Forms.TextBox();
-            this.labelRegistro = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtAFP = new System.Windows.Forms.TextBox();
             this.labelSalario = new System.Windows.Forms.Label();
@@ -84,14 +83,6 @@ namespace Empleados
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.Size = new System.Drawing.Size(100, 20);
             this.txtDUI.TabIndex = 5;
-            // 
-            // labelRegistro
-            // 
-            this.labelRegistro.AutoSize = true;
-            this.labelRegistro.Location = new System.Drawing.Point(174, 193);
-            this.labelRegistro.Name = "labelRegistro";
-            this.labelRegistro.Size = new System.Drawing.Size(0, 13);
-            this.labelRegistro.TabIndex = 7;
             // 
             // errorProvider1
             // 
@@ -214,14 +205,12 @@ namespace Empleados
             this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.labelSalario);
             this.Controls.Add(this.txtAFP);
-            this.Controls.Add(this.labelRegistro);
             this.Controls.Add(this.txtDUI);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.labelDUI);
             this.Controls.Add(this.labelNombre);
             this.Name = "Form1";
             this.Text = "Registro de empleados";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -234,7 +223,6 @@ namespace Empleados
         private System.Windows.Forms.Label labelDUI;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDUI;
-        private System.Windows.Forms.Label labelRegistro;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label labelSalario;
         private System.Windows.Forms.TextBox txtAFP;

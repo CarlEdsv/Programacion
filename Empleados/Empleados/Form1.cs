@@ -20,21 +20,6 @@ namespace Empleados
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btGuardar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btInsertar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text == "")
@@ -72,7 +57,6 @@ namespace Empleados
             Empleado.Salario = Convert.ToDouble(txtSalario.Text);
             Empleado.Afp = Empleado.AFP(Empleado.Salario);
             txtAFP.Text = Empleado.Afp.ToString();
-            labelRegistro.Text = "¡Registro guardado de la clase!";
 
             SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
             AttachDbFilename=|DataDirectory|\Planilla.mdf;Integrated Security=True;Connect Timeout=30");
@@ -121,7 +105,6 @@ namespace Empleados
             txtDUI.Text = "";
             txtSalario.Text = "";
             txtAFP.Text = "";
-            labelRegistro.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
