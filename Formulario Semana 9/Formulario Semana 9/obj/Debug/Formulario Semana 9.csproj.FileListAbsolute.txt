@@ -1,0 +1,10 @@
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\bin\Debug\Formulario Semana 9.exe.config
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\bin\Debug\Formulario Semana 9.exe
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\bin\Debug\Formulario Semana 9.pdb
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\obj\Debug\Formulario Semana 9.csproj.AssemblyReference.cache
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\obj\Debug\Formulario_Semana_9.Form1.resources
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\obj\Debug\Formulario_Semana_9.Properties.Resources.resources
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\obj\Debug\Formulario Semana 9.csproj.GenerateResource.cache
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\obj\Debug\Formulario Semana 9.csproj.CoreCompileInputs.cache
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\obj\Debug\Formulario Semana 9.exe
+C:\Users\marco\Downloads\Eduardo\programacion\C#\Formulario Semana 9\Formulario Semana 9\obj\Debug\Formulario Semana 9.pdb
